@@ -61,14 +61,14 @@ const Contact = () => {
 
   return (
     <section id="contact" className="w-full bg-[#020618] text-gray-100">
-      <div className="w-full px-6 md:px-10 lg:px-16 py-10">
+      <div className="w-full px-6 md:px-10 lg:px-16 py-15">
         <div className="flex flex-col gap-4 mb-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold">
             Get In Touch
           </h2>
           <span className="w-14 h-1 bg-sky-400 rounded-full" />
         </div>
-        <p className="text-gray-300 text-[14px] lg:text-[20px] max-w-2xl mb-12">
+        <p className="text-gray-300 text-[12px] lg:text-[16px] max-w-2xl mb-12">
           Have a question or want to work together? Feel free to reach out!
         </p>
 

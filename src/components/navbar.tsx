@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { ImCross } from "react-icons/im";
-import logo from "../assets/logo.png";
+import { useLenis } from "lenis/react";
 import clsx from "clsx";
+import logo from "../assets/logo.png";
 
 interface NavItem {
   id: number;
@@ -22,27 +23,50 @@ const navItems: NavItem[] = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [currentSection, setCurrentSection] = useState("home");
+
+  const lenis = useLenis();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 60);
+    if (!lenis) return;
+
+    const onScroll = ({ scroll }: { scroll: number }) => {
+      setScrolled(scroll > 60);
+
+      let foundSection = "home";
+      navItems.forEach((item) => {
+        const element = document.getElementById(item.target);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const top = rect.top + window.scrollY - 130;
+          if (scroll >= top) {
+            foundSection = item.target;
+          }
+        }
+      });
+      setCurrentSection(foundSection);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    lenis.on("scroll", onScroll);
+    return () => {
+      lenis.off("scroll", onScroll);
+    };
+  }, [lenis]);
 
   const scrollToSection = (id: string) => {
+    if (!lenis) return;
+
     const element = document.getElementById(id);
     if (!element) return;
 
-    const offset = 100;
-    window.scrollTo({
-      top: element.offsetTop - offset,
-      behavior: "smooth",
+    lenis.scrollTo(element, {
+      offset: -100,
+      duration: 1.2,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
 
     setOpen(false);
+    setCurrentSection(id);
   };
 
   return (
@@ -61,17 +85,17 @@ const Navbar = () => {
 
         <nav className="hidden lg:flex gap-10 text-sm font-medium text-gray-300">
           {navItems.map((item) => (
-            <a
+            <button
               key={item.id}
-              href={`#${item.target}`}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(item.target);
-              }}
-              className="hover:text-sky-400 transition"
+              onClick={() => scrollToSection(item.target)}
+              className={clsx(
+                "hover:text-sky-400 transition",
+                currentSection === item.target &&
+                  "text-sky-400 underline underline-offset-4",
+              )}
             >
               {item.label}
-            </a>
+            </button>
           ))}
         </nav>
 
@@ -90,22 +114,24 @@ const Navbar = () => {
       )}
 
       <div
-        className={`fixed top-0 right-0 min-h-screen w-50 bg-slate-900/90 backdrop-blur-xl border-l border-white/10 z-50 transition-transform duration-300 lg:hidden
-        ${open ? "translate-x-0" : "translate-x-full"}`}
+        className={clsx(
+          "fixed top-0 right-0 min-h-screen w-56 bg-slate-900/90 backdrop-blur-xl border-l border-white/10 z-50 transition-transform duration-300 lg:hidden",
+          open ? "translate-x-0" : "translate-x-full",
+        )}
       >
         <div className="flex flex-col gap-6 pt-24 px-8 text-gray-200">
           {navItems.map((item) => (
-            <a
+            <button
               key={item.id}
-              href={`#${item.target}`}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(item.target);
-              }}
-              className="text-lg hover:text-sky-400 transition"
+              onClick={() => scrollToSection(item.target)}
+              className={clsx(
+                "text-lg text-left hover:text-sky-400 transition",
+                currentSection === item.target &&
+                  "text-sky-400 underline underline-offset-4",
+              )}
             >
               {item.label}
-            </a>
+            </button>
           ))}
         </div>
 

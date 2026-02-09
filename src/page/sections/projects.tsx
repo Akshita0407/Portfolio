@@ -1,32 +1,32 @@
 import { FaGithub } from "react-icons/fa";
+
 interface Project {
   id: number;
   title: string;
   description: string;
   tech: string[];
 }
-
 const projects: Project[] = [
   {
     id: 1,
-    title: "Trade E-Commerce Platform",
+    title: "Agency Website Pages Development",
     description:
-      "Clone of a big e-commerce website; worked with senior developers and independently developed 6–8 responsive pages using React and reusable components.",
+      "Developed and integrated various pages for an agency website during training, combining frontend components with backend APIs. Ensured reusable components, responsive layouts, and a polished user experience throughout the site.",
     tech: ["React", "Reusable Components", "Responsive Design", "Tailwind CSS"],
   },
   {
     id: 2,
-    title: "Figma to Responsive Web Projects",
+    title: "Interactive E-Commerce Platform",
     description:
-      "Converted Figma designs into responsive, pixel-perfect websites for ConnectYou, Flow, and BabySteps using React and Tailwind CSS.",
-    tech: ["React", "Tailwind CSS", "Figma", "Responsive Design"],
+      "Built a fully responsive e-commerce website, collaborating with senior developers and independently developing 6–8 pages using React. Implemented reusable components and a clean layout to ensure scalability, maintainability, and an intuitive shopping experience across devices.",
+    tech: ["React", "Reusable Components", "Responsive Design", "Tailwind CSS"],
   },
   {
     id: 3,
-    title: "Official Company Website Service Pages",
+    title: "Figma-to-Web Practice Projects",
     description:
-      "Built and integrated service pages during training with backend integration.",
-    tech: ["React", "Reusable Components", "Responsive Design", "Tailwind CSS"],
+      "Converted multiple Figma design mockups into fully responsive, practice websites using React and Tailwind CSS. Focused on pixel-perfect layouts, component reusability, and responsive design to strengthen frontend development skills.",
+    tech: ["React", "Tailwind CSS", "Figma", "Responsive Design"],
   },
 ];
 
@@ -40,7 +40,7 @@ const Projects = () => {
           </h2>
           <span className="w-14 h-1 bg-sky-400 rounded-full" />
         </div>
-        <p className="text-gray-300 max-w-2xl text-[14px] lg:text-[20px] mb-12">
+        <p className="text-gray-300 max-w-2xl text-[12px] lg:text-[16px] mb-12">
           Here are some of the projects I've worked on, showcasing my skills in
           building responsive and interactive web applications.
         </p>
@@ -56,10 +56,10 @@ const Projects = () => {
               </span>
 
               <div className="relative z-10">
-                <h3 className="md:text-2xl text-xl font-bold mb-3 text-gray-100 group-hover:text-sky-400 transition-colors">
+                <h3 className="md:text-xl text-[14px] font-bold mb-3 text-gray-100 group-hover:text-sky-400 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 text-[14px] lg:text-[20px] mb-6 leading-relaxed">
+                <p className="text-gray-400  max-w-2xl text-[12px] lg:text-[16px] mb-6 leading-relaxed">
                   {project.description}
                 </p>
 

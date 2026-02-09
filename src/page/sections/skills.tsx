@@ -41,7 +41,7 @@ const data: Content[] = [
 const Skills = () => {
   return (
     <section id="skills" className=" w-full bg-[#020618] text-gray-100">
-      <div className="w-full px-6 md:px-10 lg:px-16 py-10">
+      <div className="w-full px-6 md:px-10 lg:px-16 py-15">
         <div className="flex flex-col gap-4 mb-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold">
             Skills
