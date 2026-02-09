@@ -12,14 +12,14 @@ const Portfolio = () => {
       <header className="w-full h-20 bg-[#020618] flex justify-center items-center  ">
         <Navbar />
       </header>
-      <main>
+      <main className="w-full h-auto">
         <Home />
         <About />
         <Skills />
         <Projects />
         <Contact />
       </main>
-      <footer>
+      <footer className="w-full ">
         <Footer />
       </footer>
     </>
