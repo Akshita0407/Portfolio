@@ -34,7 +34,7 @@ const data: Content[] = [
   {
     id: 3,
     title: "Tools",
-    skills: ["Git", "GitHub"],
+    skills: ["Git", "GitHub", "Postman", "Vs Code"],
   },
 ];
 

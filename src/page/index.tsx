@@ -5,7 +5,8 @@ import Skills from "./sections/skills";
 import Education from "./sections/education";
 import Projects from "./sections/projects";
 import Contact from "./sections/contact";
-import Footer from "./sections/footer";
+import Footer from "../components/footer";
+import Slider from "./sections/slider";
 
 const Portfolio = () => {
   return (
@@ -19,6 +20,7 @@ const Portfolio = () => {
         <Skills />
         <Education />
         <Projects />
+        <Slider />
         <Contact />
       </main>
       <footer className="w-full ">

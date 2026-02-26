@@ -51,7 +51,7 @@ const Projects = () => {
               key={project.id}
               className="group relative bg-[#020618] border border-white/20 rounded-2xl p-8 hover:border-sky-400 transition-all duration-300 hover:-translate-y-1"
             >
-              <span className="absolute top-6 right-8 text-6xl font-bold text-white/5 group-hover:text-sky-400/20 transition-colors">
+              <span className="absolute lg:left-auto lg:top-6 lg:right-8 lg:translate-x-0 lg:translate-y-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-white/5 group-hover:text-sky-400/20 transition-colors">
                 0{project.id}
               </span>
 

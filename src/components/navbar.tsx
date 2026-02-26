@@ -79,7 +79,7 @@ const Navbar = () => {
             : "bg-slate-900/60 border-white/5",
         )}
       >
-        <Link to="/" className="flex items-center w-24">
+        <Link to="/" className="flex items-center w-24 py-4">
           <img src={logo} alt="logo" className="w-full h-full object-contain" />
         </Link>
 
@@ -108,7 +108,7 @@ const Navbar = () => {
 
       {open && (
         <div
-          className="fixed inset-0 bg-black/40 z-40"
+          className="fixed inset-0 h-screen bg-black/40 z-40"
           onClick={() => setOpen(false)}
         />
       )}

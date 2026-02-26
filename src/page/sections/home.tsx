@@ -56,7 +56,7 @@ const Home = () => {
       </section>
 
       {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50  flex items-center justify-center bg-black/70 backdrop-blur-sm">
           <div className="relative w-full max-w-4xl h-[85vh] bg-slate-900 rounded-xl overflow-hidden border border-white/10">
             <button
               onClick={() => setOpen(false)}
