@@ -12,9 +12,9 @@ const Resumate = () => {
             <span className="w-24 h-1 bg-sky-400 rounded-full" />
           </div>
 
-          <div className="w-full flex grid grid-cols-1 lg:grid-cols-2 gap-8 text-white">
-            <div className="w-full flex flex-col p-2  gap-5">
-              <h2 className="text-2xl font-semibold">
+          <div className="w-full  grid grid-cols-1 lg:grid-cols-2 text-gray-800 gap-8 ">
+            <div className="w-full flex flex-col p-2  lg:order-1 order-2 gap-5 text-[12px] md:text-[16px] lg:text-xl">
+              <h2 className="text-2xl font-semibold text-[#020618]">
                 Resumate-Resume Builder Website
               </h2>
               <p>
@@ -32,7 +32,7 @@ const Resumate = () => {
                 and update it anytime.
               </p>
             </div>
-            <div className="w-full flex justify-center items-center">
+            <div className="w-full flex justify-center items-center lg:order-2 order-1">
               <video
                 src={video}
                 loop
