@@ -13,7 +13,7 @@ const Resumate = () => {
           </div>
 
           <div className="w-full  grid grid-cols-1 lg:grid-cols-2 text-gray-800 gap-8 ">
-            <div className="w-full flex flex-col p-2  lg:order-1 order-2 gap-5 text-[12px] md:text-[16px] lg:text-xl">
+            <div className="w-full flex flex-col p-2  lg:order-1 order-2 gap-5 text-[12px] md:text-[16px] ">
               <h2 className="text-2xl font-semibold text-[#020618]">
                 Resumate-Resume Builder Website
               </h2>
