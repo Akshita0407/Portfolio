@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+
 import { ReactLenis } from "lenis/react";
 import Portfolio from "./page";
 import "./App.css";

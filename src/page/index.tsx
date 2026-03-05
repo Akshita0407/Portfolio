@@ -7,6 +7,7 @@ import Projects from "./sections/projects";
 import Contact from "./sections/contact";
 import Footer from "../components/footer";
 import Slider from "./sections/slider";
+import Resumate from "./sections/resumate";
 
 const Portfolio = () => {
   return (
@@ -18,8 +19,10 @@ const Portfolio = () => {
         <Home />
         <About />
         <Skills />
+
         <Education />
         <Projects />
+        <Resumate />
         <Slider />
         <Contact />
       </main>

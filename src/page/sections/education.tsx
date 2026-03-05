@@ -22,7 +22,7 @@ const Education = () => {
   ];
 
   return (
-    <section className="w-full px-6 md:px-10 lg:px-16 py-15 text-[#020618]">
+    <section className="w-full px-6 md:px-10 lg:px-16 py-15 text-[#020618] bg-white">
       <div className="flex flex-col gap-4 mb-8">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold">
           Education

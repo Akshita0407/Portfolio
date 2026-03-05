@@ -46,7 +46,7 @@ const Slider = () => {
           </h2>
           <div className="w-14 h-1 bg-sky-400 rounded-full mt-3 block" />
         </div>
-        {/* <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden">
           <div className="flex gap-8 animate-infinite-scroll whitespace-nowrap">
             {[...data, ...data, ...data].map((skill) => (
               <div
@@ -67,8 +67,8 @@ const Slider = () => {
               </div>
             ))}
           </div>
-        </div> */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 px-6 md:px-10 lg:px-16">
+        </div>
+        {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 px-6 md:px-10 lg:px-16">
           {data.map((skill) => (
             <div
               key={skill.id}
@@ -95,7 +95,7 @@ const Slider = () => {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

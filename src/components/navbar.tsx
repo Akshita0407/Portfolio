@@ -115,7 +115,7 @@ const Navbar = () => {
 
       <div
         className={clsx(
-          "fixed top-0 right-0 min-h-screen w-56 bg-slate-900/90 backdrop-blur-xl border-l border-white/10 z-50 transition-transform duration-300 lg:hidden",
+          "fixed top-0 right-0 min-h-screen w-56n bg-slate-900/90 backdrop-blur-xl border-l border-white/10 z-50 transition-transform duration-300 lg:hidden",
           open ? "translate-x-0" : "translate-x-full",
         )}
       >
